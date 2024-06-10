@@ -45,13 +45,9 @@ public class TelegramBotHandler extends TelegramLongPollingBot {
             if (update.hasMessage()) {
                 chatId = update.getMessage().getChatId();
                 textFromUser = update.getMessage().getText();
-
-
             } else if (update.hasCallbackQuery()) {
                 chatId = update.getCallbackQuery().getMessage().getChatId();
                 textFromUser = update.getCallbackQuery().getData();
-
-//
             }
 
             messageToUser = chatsRouter.route(chatId, textFromUser);
