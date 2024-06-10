@@ -1,4 +1,4 @@
-package org.example;
+package org.example.util;
 
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -21,7 +21,7 @@ public class InlineKeyboardsUtil {
 
             button = new InlineKeyboardButton();
             button.setText(currentAnswerAsString);
-            button.setCallbackData(currentAnswerAsString);
+            button.setCallbackData("answer_button" + currentAnswerAsString);
             row.add(button);
 
             keyboard.add(row);

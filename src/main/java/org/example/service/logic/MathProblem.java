@@ -1,4 +1,4 @@
-package org.example;
+package org.example.service.logic;
 
 import java.util.ArrayList;
 import java.util.Random;
